@@ -1,0 +1,4 @@
+FROM mysql
+ENV MYSQL_DATABASE database
+COPY ./createtables.sql /docker-entrypoint-initdb.d/
+COPY ./insertvalues.sql /docker-entrypoint-initdb.d/
